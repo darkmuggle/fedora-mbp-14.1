@@ -1,0 +1,10 @@
+[Unit]
+Description=Job that disables sleep from stopping nvme hardware on MBP
+
+[Service]
+ExecStart=/usr/local/bin/fixsleep.sh
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
