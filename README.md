@@ -27,12 +27,7 @@ gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true
 
 Without tweaks, the sleek Macbook Pro running Linux will be a sleeping beauty. The root cause is that the NVME disk powers down; the device defaults require that you turn on cold-plugging. In the scripts https://github.com/darkmuggle/fedora-mbp-14.1/blob/patronus/files/fixsleep.sh#L2 allows her to wake up, but she's a bit groggy (give her a good 10-20 seconds).
 
-I recommend disabling automatic suspend when the lid is closed by setting the following in `/etc/systemd/login.conf`:
-```
-HandleLidSwitch=ignore
-LidSwitchIgnoreInhibited=yes
-```
-and then reboot.
+https://github.com/darkmuggle/fedora-mbp-14.1/blob/    patronus/files/on-sleep.service goes a step further any prevented the groggy wake-ups. I found that running `modprobe -r thunderbolt` fully fixes the problem.
 
 ### Root commands:
 
