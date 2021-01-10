@@ -5,6 +5,7 @@ Before=sleep.target
 [Service]
 Type=oneshot
 ExecStart=/usr/sbin/modprobe -r thunderbolt
+ExecStart=/bin/echo "XHC2" \x3e /proc/acpi/wakeup
 ExecStart=/bin/echo 0 \x3e '/sys/bus/pci/devices/0000\:01\:00.0/d3cold_allowed'
 ExecStart=/usr/bin/sync
 ExecStop=/usr/sbin/modprobe thunderbolt
