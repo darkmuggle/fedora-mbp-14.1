@@ -14,6 +14,7 @@ install:
 	install -vT files/macbook.conf /etc/dracut.conf.d/macbook.conf
 	install -vT files/fixsleep.sh /usr/local/bin/fixsleep.sh
 	install -vT files/on-sleep.service /etc/systemd/system/on-sleep.service
+	install -vT files/fixsleep.service /etc/systemd/system/fixsleep.service
 	systemctl enable --now fixsleep.service
 	dracut -f
 	grubby --update-kernel=ALL --args="efi=noruntime pcie_ports=compat brcmfmac.rambase_addr=0x160000"
