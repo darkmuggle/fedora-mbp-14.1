@@ -3,7 +3,7 @@
 Fedora 33 _mostly_ works on a MacBook Pro 14,1 (seriously, there's a comma in the version).
 
 Out of the box, _sort_ of works. But things get a bit flaky without some tweaks. For example:
-- Wifi is flaky (you need a karg tweak)
+- Wifi is flaky at best (you need a karg tweak) to unusable (2.4Ghz with dreadful speeds)
 - Without tweaks, your MacBook doesn't go to sleep, it goes comatose.
 - Those with a privacy focus will be pleased to know that Facetime HD camera is pretty much unusable.
 - Sound needs a KMOD.
